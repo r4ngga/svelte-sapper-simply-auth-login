@@ -1,0 +1,51 @@
+{
+  "name": "TODO",
+  "description": "TODO",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-static": "*",
+    "@types/mongoose": "^5.11.97",
+    "autoprefixer": "^10.4.12",
+    "compression": "^1.7.1",
+    "cssnano": "^5.1.13",
+    "local-storage": "^2.0.0",
+    "mongoose": "^6.6.5",
+    "node-fetch": "^2.6.7",
+    "polka": "next",
+    "postcss": "^8.4.18",
+    "postcss-import": "^15.0.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-nesting": "^10.2.0",
+    "postcss-preset-env": "^7.8.2",
+    "sapper-environment": "^1.0.1",
+    "sirv": "^1.0.0",
+    "svelte-local-storage-store": "^0.3.1",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.1.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-replace": "^2.4.0",
+    "@rollup/plugin-url": "^5.0.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "localstorage-polyfill": "^1.0.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "sapper": "^0.28.0",
+    "svelte": "^3.17.3"
+  }
+}
