@@ -19,25 +19,26 @@ if(typeof window !== 'undefined'){
 sessionCheck.subscribe((u) => (user_value = u))
 
 let unsubscribe = sessionCheck.subscribe((u) => (user_value = u))
- function handlelogin(){
-      
-      // if(user){
-      //   console.log(user);
-      //   $store = user;
+ async function handlelogin(){
+      const user = await sessionData(username, password);
+      if(user){
+        console.log(user);
+        $store = user;
         
-      // }else{
-      //   errormsg = 'fail login';
-      //   console.log(errormsg);
-      // }
-      sessionCheck.subscribe((u) => (user_value = u))
+        sessionCheck.subscribe((u) => (user_value = u))
 
-      if(typeof window !== "undefined"){
-        // localStorage.setItem('user', JSON.stringify({ username: username, password: password }));
-        console.log(username, password, sessionCheck);
-        sessionCheck.update((u) => u = JSON.stringify({ username: username, password: password }));
-        localStorage.setItem('user', JSON.stringify({ username: username, password: password }));
+        if(typeof window !== "undefined"){
+          // localStorage.setItem('user', JSON.stringify({ username: username, password: password }));
+          console.log(username, password, sessionCheck);
+          sessionCheck.update((u) => u = JSON.stringify({ username: username, password: password }));
+          localStorage.setItem('user', JSON.stringify({ username: username, password: password }));
+        }
+        console.log('sessioncheck',user_value);
+      }else{
+        errormsg = 'fail login';
+        console.log(errormsg);
       }
-      console.log('sessioncheck',user_value);
+      
   }
 
   function handleLogout() {
